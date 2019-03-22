@@ -10,7 +10,7 @@
  * @version 1.9.0
  */
 
-if ( !function_exists('mawt_scripts') ):
+if (!function_exists('mawt_scripts') ):
     function mawt_scripts()
     {
         wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', array(), '1.0.0', 'all' );
@@ -27,3 +27,12 @@ if ( !function_exists('mawt_scripts') ):
 endif;
 
 add_action('wp_enqueue_scripts', 'mawt_scripts');
+
+if (!function_exists('mawt_setup')):
+    function mawt_setup()
+    {
+        add_theme_support('post-thumbnails');
+    }
+endif;
+
+add_action('after_setup_theme', 'mawt_setup');

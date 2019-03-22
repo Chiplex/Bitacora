@@ -10,7 +10,7 @@
 <body>
     <header class=Header>
         <div class="Logo">
-            <a href="#">Logo</a>
+            <a href="<?php echo esc_url(home_url('/')) ?>">Logo</a>
         </div>
         <nav class="menu">
             <ul>
