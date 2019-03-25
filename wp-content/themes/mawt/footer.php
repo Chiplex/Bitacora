@@ -1,15 +1,13 @@
 </main>
     <footer>
-        <nav class="SocialMedia">
-            <ul>
-                <li><a href="">Redes</a></li>
-                <li><a href="">Redes</a></li>
-                <li><a href="">Redes</a></li>
-                <li><a href="">Redes</a></li>
-                <li><a href="">Redes</a></li>
-            </ul>
-        </nav>
-        <div><small>&copy; 2019 por @chiplex</small></div>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'social_menu',
+            'container' => 'nav',
+            'container_class' => 'SocialMedia'
+        ));
+        ?>
+        <div><small>&copy; <?php echo date('Y') ?> por @chiplex</small></div>
     </footer>
     <?php wp_footer() ?>
 </body>

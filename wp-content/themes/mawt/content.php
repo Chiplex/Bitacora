@@ -23,9 +23,9 @@
             <p><?php the_author() ?></p>
             <p><?php the_author_posts_link() ?></p>
             <div class="the-content">
-                <?php the_content() ?>
+                <?php //the_content() ?>
             </div>
-        </article>
+        </article>        
     <?php endwhile; else: ?>
     <p>Contenido solicitado no existe</p>
     <?php endif; ?>    

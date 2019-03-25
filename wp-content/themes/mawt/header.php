@@ -11,15 +11,21 @@
     <header class=Header>
         <div class="Logo">
             <a href="<?php echo esc_url(home_url('/')) ?>">Logo</a>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Seccion 1</a></li>
-                <li><a href="#">Seccion 2</a></li>
-                <li><a href="#">Seccion 3</a></li>
-                <li><a href="#">Seccion 4</a></li>
-                <li><a href="#">Seccion 5</a></li>
-            </ul>
-        </nav>
+        </div>        
+        <?php
+            if(has_nav_menu('main_menu')):
+                wp_nav_menu(array(
+                    'theme_location' => 'main_menu',
+                    'container' => 'nav',
+                    'container_class' => 'Menu',
+                ));
+            else: ?>
+            <nav class="Menu">
+                <ul>
+                    <?php wp_list_pages('title_li') ;?>
+                </ul>
+            </nav>
+            <?php endif; ?>
+                    
     </header>
     <main class="Main">
