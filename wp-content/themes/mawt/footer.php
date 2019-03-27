@@ -1,12 +1,10 @@
 </main>
-    <footer>
-        <?php
-        wp_nav_menu(array(
+    <footer class="Footer">
+        <?php wp_nav_menu(array(
             'theme_location' => 'social_menu',
             'container' => 'nav',
             'container_class' => 'SocialMedia'
-        ));
-        ?>
+        )); ?>
         <div><small>&copy; <?php echo date('Y') ?> por @chiplex</small></div>
     </footer>
     <?php wp_footer() ?>

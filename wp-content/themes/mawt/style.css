@@ -13,6 +13,74 @@ Text Domain: mawt
 html   {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    background-color: beige;
-    color: forestgreen;
+    background-color: wheat;
+    color: #3b484d;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.Header,
+.Main,
+.Footer{
+    border: thin solid rgb(102, 77, 32);
+    margin-bottom: 1rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.Main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+        'content sidebar'
+        'other sidebar';  
+    grid-gap: 1rem;  
+}
+
+.Main>*{
+    background-color: #CCC;
+    padding: 1rem;
+    color: #222;
+}
+
+.Content{
+    grid-area: content;
+}
+
+.Content hr{
+    border: thick dotted rgb(47, 54, 36);
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.Sidebar{
+    grid-area: sidebar;
+}
+
+.Other{
+    grid-area: other;
+}
+
+.Widget, 
+.Pagination{
+    background-color: #aaa;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.Error404{
+    font-size:bold;
+    font-size:5vw;
+    text-align: center;
 }

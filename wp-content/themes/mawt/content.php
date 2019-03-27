@@ -1,14 +1,10 @@
-<article class="Content">
-    <h1>Creación de Temas</h1>    
+<article class="Content">    
     <?php if (have_posts()): while(have_posts()): the_post();?>
-        <article>
-            <h2><?php the_title(); ?></h2>
-            <?php get_the_title(); ?>
-            <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>            
+        <article>      
             <!-- imagen destacada -->            
             <?php the_post_thumbnail() ?>
-            <?php get_the_post_thumbnail_url(); ?>
-            <img src="<?php get_the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail() ?>">
+            <!-- Titulo -->
+            <h2><a href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer"><?php the_title(); ?></a></h2>
             <!-- contenido -->
             <?php the_excerpt(); ?>
             <!-- categoria -->
@@ -20,17 +16,14 @@
             <p><?php the_time('d-M-Y') ?></p>
             <p><?php the_time(get_option('date_format')) ?></p>
             <!-- autor -->
-            <p><?php the_author() ?></p>
             <p><?php the_author_posts_link() ?></p>
-            <div class="the-content">
-                <?php //the_content() ?>
-            </div>
-        </article>        
+        </article>    
+        <hr>    
     <?php endwhile; else: ?>
     <p>Contenido solicitado no existe</p>
     <?php endif; ?>    
 </article>
-<section class="Pagination">
+<section class="Pagination Other">
     <?php // previous_post_link() ?>
     <?php // next_post_link() ?>
     <?php echo paginate_links() ?>

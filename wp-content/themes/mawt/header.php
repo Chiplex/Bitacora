@@ -12,20 +12,17 @@
         <div class="Logo">
             <a href="<?php echo esc_url(home_url('/')) ?>">Logo</a>
         </div>        
-        <?php
-            if(has_nav_menu('main_menu')):
+        <?php if(has_nav_menu('main_menu')):
                 wp_nav_menu(array(
                     'theme_location' => 'main_menu',
                     'container' => 'nav',
                     'container_class' => 'Menu',
-                ));
-            else: ?>
+                )); else: ?>
             <nav class="Menu">
                 <ul>
                     <?php wp_list_pages('title_li') ;?>
                 </ul>
             </nav>
-            <?php endif; ?>
-                    
+        <?php endif; ?>                    
     </header>
     <main class="Main">
