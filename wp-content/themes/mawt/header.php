@@ -8,9 +8,14 @@
     <?php wp_head(); ?>
 </head>
 <body>
+    <?php get_header('wordpress'); ?>
     <header class=Header>
         <div class="Logo">
-            <a href="<?php echo esc_url(home_url('/')) ?>">Logo</a>
+            <?php if (has_custom_logo()):
+                the_custom_logo();
+            else:?>
+                 <a href="<?php echo esc_url(home_url('/')) ?>"><?php echo get_bloginfo(); ?></a>
+            <?php endif; ?>
         </div>        
         <?php if(has_nav_menu('main_menu')):
                 wp_nav_menu(array(

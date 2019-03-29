@@ -37,6 +37,26 @@ if (!function_exists('mawt_setup')):
         add_theme_support('html5', array(
             'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'
         ));
+
+        // Configuración de logo personalizados
+        add_theme_support('custom-logo',array(
+            'height' => 100,
+            'width' => 100,
+            'flex-height' => true,
+            'flex-width' => true,
+        ));
+        add_theme_support('custom-background', array(
+            'default-color' => 'DDD',
+            'default-image' => get_template_directory_uri().'/img/background-img.png',
+            'default-repeat' =>'repeat',
+            'default-position-x' => '',
+            'default-position-y' => '',
+            'default-size' => '',
+            'default-attachment' => 'fixed'
+            
+        ));
+
+        add_theme_support('customize-selective-refresh-widgets');
     }
 endif;
 
@@ -81,3 +101,6 @@ if (!function_exists('mawt_register_sidebars')):
 endif;
 
 add_action('widgets_init', 'mawt_register_sidebars');
+
+require_once get_template_directory().'/inc/custom-header.php';
+require_once get_template_directory().'/inc/customizer.php';

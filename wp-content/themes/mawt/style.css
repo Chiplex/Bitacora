@@ -84,3 +84,8 @@ img{
     font-size:5vw;
     text-align: center;
 }
+
+.custom-logo-link img{
+    width: 100px;
+    height: auto;
+}
