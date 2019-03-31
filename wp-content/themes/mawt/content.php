@@ -1,5 +1,8 @@
 <article class="Content">    
-    <?php if (have_posts()): while(have_posts()): the_post();?>
+    <?php 
+        query_posts(null);
+        if (have_posts()): while(have_posts()): the_post();
+    ?>
         <article>      
             <!-- imagen destacada -->            
             <?php the_post_thumbnail() ?>
@@ -21,7 +24,7 @@
         <hr>    
     <?php endwhile; else: ?>
     <p>Contenido solicitado no existe</p>
-    <?php endif; ?>    
+    <?php endif; wp_reset_postdata();?>    
 </article>
 <section class="Pagination Other">
     <?php // previous_post_link() ?>

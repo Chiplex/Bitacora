@@ -31,3 +31,5 @@ endif;
 
 add_action('after_setup_theme', 'mawt_custom_header');
 
+?>
+

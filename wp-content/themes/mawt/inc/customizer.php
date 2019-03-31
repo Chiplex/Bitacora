@@ -32,3 +32,5 @@ if (!function_exists('mawt_customize_blogdescription')):
         bloginfo('description');
     }
 endif;
+
+?>

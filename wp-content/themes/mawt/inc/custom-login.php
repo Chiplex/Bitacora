@@ -40,3 +40,5 @@ if (!function_exists( 'mawt_login_logo_url_title' )):
 endif;
 
 add_filter('login_headertitle', 'mawt_login_logo_url_title');
+
+?>

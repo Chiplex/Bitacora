@@ -156,3 +156,5 @@ if (!function_exists('mawt_wp_dashboard_setup')) :
     }
 endif;
 // add_action('wp_dashboard_setup', 'mawt_wp_dashboard_setup');
+
+?>

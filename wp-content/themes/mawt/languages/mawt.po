@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Language: en_US\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. Text in echo
+#: mawt/sidebar.php:7
+msgid "Buscar"
+msgstr "Search"
+
+#. Text in function
+#: mawt/inc/custom-admin.php:1
+msgid "Chiplex"
+msgstr "Chiplex"
+
+#. Text in function
+#: mawt/functions.php:1
+msgid "Este es el sidebar del pie"
+msgstr "This is footer sidebar"
+
+#. Text in function
+#: mawt/functions.php:1
+msgid "Este es el sidebar principal"
+msgstr "This is main sidebar"
+
+#. Text in function
+#: mawt/inc/custom-admin.php:1
+msgid "Facebook"
+msgstr "Facebook"
+
+#. Text in function
+#: mawt/functions.php:1
+msgid "Menú Principal"
+msgstr "Main Menu"
+
+#. Text in function
+#: mawt/functions.php:1
+msgid "Menú Redes Sociales"
+msgstr "Social Media Menu"
+
+#. Text in function
+#: mawt/inc/custom-admin.php:1
+msgid "Mi menu"
+msgstr "My Menu"
+
+#. Text in function
+#: mawt/functions.php:1
+msgid "Sidebar Principal"
+msgstr "Main Sidebar"
+
+#. Text in function
+#: mawt/functions.php:1
+msgid "Sidebar de pie de pagina"
+msgstr "Main footer Sidebar"
+
+#. Text in function
+#: mawt/inc/custom-admin.php:1
+msgid "Twitter"
+msgstr "Twitter"

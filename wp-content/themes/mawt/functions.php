@@ -10,7 +10,7 @@
  * @version 1.2.0
  */
 
-//  Scripts
+// Inyeccion de Estilos y Scripts en la WordPress Navegacion
 if (!function_exists('mawt_scripts') ):
     function mawt_scripts()
     {
@@ -28,11 +28,22 @@ if (!function_exists('mawt_scripts') ):
 endif;
 add_action('wp_enqueue_scripts', 'mawt_scripts');
 
-// Scripts
+// Inyeccion en soporte de temas en la WordPress Navegacion
 if (!function_exists('mawt_setup')):
     function mawt_setup()
     {
+        // Soporte para traducciones
+        // https://developer.wordpress.org/themes/functionality/internationalization/
+        // https://make.wordpress.org/polyglots/handbook/
+        // Herramientas
+        // https://www.icanlocalize.com/tools/php_scanner
+        // https://poedit.net/
+        load_theme_textdomain('mawt', get_template_directory_uri(),'/languages');
+
+        //https://developer.wordpress.org/reference/functions/add_theme_support/
         add_theme_support('post-thumbnails');
+        //add_image_size( name, width, height, crop );
+
         add_theme_support('html5', array(
             'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'
         ));
@@ -58,10 +69,9 @@ if (!function_exists('mawt_setup')):
         add_theme_support('customize-selective-refresh-widgets');
     }
 endif;
-
 add_action('after_setup_theme', 'mawt_setup');
 
-// Menus
+// Inyeccion de menú navegacion en la WordPress Navegacion
 if (!function_exists('mawt_menus')):
     function mawt_menus()
     {
@@ -71,7 +81,6 @@ if (!function_exists('mawt_menus')):
         ));
     }
 endif;
-
 add_action('init', 'mawt_menus');
 
 // Wigets
@@ -105,3 +114,5 @@ require_once get_template_directory().'/inc/custom-header.php';
 require_once get_template_directory().'/inc/customizer.php';
 require_once get_template_directory().'/inc/custom-login.php';
 require_once get_template_directory().'/inc/custom-admin.php';
+
+?>
