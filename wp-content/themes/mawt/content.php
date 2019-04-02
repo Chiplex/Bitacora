@@ -1,6 +1,6 @@
 <article class="Content">    
     <?php 
-        query_posts(null);
+        
         if (have_posts()): while(have_posts()): the_post();
     ?>
         <article>      
@@ -20,11 +20,26 @@
             <p><?php the_time(get_option('date_format')) ?></p>
             <!-- autor -->
             <p><?php the_author_posts_link() ?></p>
+            <div>
+                <h3>Custom Fields and Metaboxes nativos</h3>
+                <?php the_meta(); ?>
+                <p><?php echo get_post_meta(get_the_ID(), 'Origen', TRUE) ?></p>
+                <p><?php echo get_post_meta(get_the_ID(), 'Actividad', TRUE) ?></p>
+                <p><?php echo get_post_meta(get_the_ID(), 'mb_origen_raza', TRUE) ?></p>
+                <p><?php echo get_post_meta(get_the_ID(), 'mb_esperanza_vida', TRUE) ?></p>
+                <h3>Custom Fields and Metaboxes por plugins</h3>
+                <p><?php the_field('ideal_para'); ?></p>
+                <p><?php echo the_field('ideal_para'); ?></p>
+            </div>
         </article>    
         <hr>    
     <?php endwhile; else: ?>
     <p>Contenido solicitado no existe</p>
-    <?php endif; wp_reset_postdata();?>    
+    <?php 
+        endif; 
+        wp_reset_postdata(); 
+        wp_reset_query();
+    ?>    
 </article>
 <section class="Pagination Other">
     <?php // previous_post_link() ?>

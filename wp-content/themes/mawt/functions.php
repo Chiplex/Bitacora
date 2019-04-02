@@ -114,5 +114,11 @@ require_once get_template_directory().'/inc/custom-header.php';
 require_once get_template_directory().'/inc/customizer.php';
 require_once get_template_directory().'/inc/custom-login.php';
 require_once get_template_directory().'/inc/custom-admin.php';
+// No descomentes este elemento permite agregar campor personalizadosen la entradas pues es para los plugins 
+// require_once get_template_directory().'/inc/custom-metaboxes.php';
+// No descomentes estos elementos permiten realizar nuevo tipo de entradas pues es para los plugins 
+// require_once get_template_directory().'/inc/custom-post-types.php';
+// require_once get_template_directory().'/inc/custom-taxonomies.php';
+require_once get_template_directory().'/inc/custom-pre-get-posts.php';
 
 ?>
